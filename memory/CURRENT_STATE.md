@@ -1,194 +1,83 @@
-Current State
+# Current State
 
-«Last updated: 2026-08-16»
+Last updated: 2026-08-16
 
-This file describes the current operational state of Codex Context Memory.
+## Current phase
 
-Unlike "PROJECT_MEMORY.md", this document is expected to change frequently as development progresses.
+Foundation — v0.1 manual workflow validation.
 
-Current phase
+The repository has the complete manual memory-file structure and a recorded first fresh-session experiment. The architecture is not yet considered validated because Experiment 002 has not been run after correcting the consistency problems found in Experiment 001.
 
-Phase: Foundation / v0.1 design
+## Repository reality
 
-The project is currently establishing the first version of its persistent context architecture.
+The canonical memory layout is:
 
-The immediate goal is to create a complete minimal memory system that can be tested with real Codex workflows before building automation around it.
+- `memory/PROJECT_MEMORY.md`
+- `memory/CURRENT_STATE.md`
+- `memory/DECISIONS.md`
+- `memory/TASKS.md`
+- `memory/HANDOFF.md`
 
-Completed
+`AGENTS.md` contains the repository-wide agent workflow. Validation records live under `experiments/`.
 
-The following foundation work has been completed:
+## Completed
 
-- Public GitHub repository created
-- Initial project README created
-- Codex-first project direction defined
-- "AGENTS.md" agent instructions created
-- Memory hierarchy defined
-- Long-term "PROJECT_MEMORY.md" created
-- Claude Code compatibility established as a secondary project goal
-- Markdown selected as the initial memory storage format
+- Repository structure and supporting documentation directories created.
+- Durable project memory established.
+- Current-state, decision, task, and handoff files created.
+- Six initial architectural decisions recorded.
+- Experiment 001 completed and recorded as a partial success.
+- The nested-path defect for `DECISIONS.md` and `HANDOFF.md` corrected in commit `155228a0ab8dc054850a263b0a9b78542038dab7`.
+- Agent instructions strengthened with startup, precedence, missing-file, stale-memory, ownership, update, validation, Git, and security rules.
+- Frequently changing status synchronized across `CURRENT_STATE.md`, `TASKS.md`, and `HANDOFF.md`.
 
-Current architecture
+## Experiment 001 result
 
-The intended repository memory structure is:
+Experiment 001 showed that a fresh Codex session could recover the project purpose and major architectural decisions without prior conversation. It also exposed three failures:
 
-AGENTS.md
+1. two memory files were stored under an unintended nested directory;
+2. current-state and task files still described already completed work as missing; and
+3. the handoff claimed Experiment 001 had not run.
 
-memory/
-├── PROJECT_MEMORY.md
-├── CURRENT_STATE.md
-├── DECISIONS.md
-├── TASKS.md
-└── HANDOFF.md
+The path and documentation issues have now been corrected. They have not yet been revalidated in a fresh session.
 
-Currently implemented:
+## Implemented in v0.1
 
-AGENTS.md
-memory/PROJECT_MEMORY.md
-memory/CURRENT_STATE.md
+- Repository-native Markdown memory.
+- Explicit separation of durable memory, current state, decisions, tasks, and handoff context.
+- Codex-first operating instructions.
+- Git-based review and history for memory changes.
+- Manual validation and experiment records.
 
-Still to be added:
+## Not implemented
 
-memory/DECISIONS.md
-memory/TASKS.md
-memory/HANDOFF.md
+- CLI commands.
+- Automatic memory extraction or updates.
+- Git-aware change detection.
+- Memory compaction or token-budget management.
+- Automatic stale-memory detection.
+- Automatic handoff generation.
+- Schema or link validation tooling.
+- Secret scanning.
+- Claude Code adapter or separate compatibility layer.
+- Global installation or package distribution.
 
-Current focus
+## Known limitations
 
-Complete the minimum viable memory architecture.
+- Memory maintenance and consistency checks are manual.
+- The framework has only one recorded fresh-session experiment.
+- There are no multi-repository results or token-usage benchmarks.
+- The current structure relies on agents following `AGENTS.md` correctly.
+- No automated mechanism prevents future duplication or stale status.
 
-The next files should define:
+## Immediate next action
 
-1. architectural decision records
-2. actionable task tracking
-3. session handoff behavior
+Run Experiment 002 in a fresh Codex session using the corrected paths and synchronized memory files. Record the result in `experiments/002-fresh-codex-session.md`, then update `CURRENT_STATE.md`, `TASKS.md`, and `HANDOFF.md` from the evidence.
 
-After these files exist, the memory workflow should be tested manually using a fresh Codex session.
+## Experiment 002 success criteria
 
-Active work
-
-Memory architecture
-
-Status: In progress
-
-Goal:
-
-Create a small set of repository files that allows a fresh Codex session to reconstruct enough project context to continue meaningful work.
-
-Codex workflow
-
-Status: Designing
-
-The intended session workflow is:
-
-Start Codex session
-        ↓
-Read AGENTS.md
-        ↓
-Read PROJECT_MEMORY.md
-        ↓
-Read CURRENT_STATE.md
-        ↓
-Read relevant decisions/tasks
-        ↓
-Perform work
-        ↓
-Validate changes
-        ↓
-Update CURRENT_STATE
-        ↓
-Write HANDOFF if necessary
-
-Claude Code compatibility
-
-Status: Planned
-
-Claude Code support will be introduced only after the Codex-first memory workflow is functional.
-
-The compatibility layer should reuse the same memory files instead of creating an independent memory database.
-
-Not implemented yet
-
-The following features are ideas or planned work and must not be described as completed functionality:
-
-- CLI
-- automatic memory updates
-- Git-aware state detection
-- context compaction
-- stale-memory detection
-- automatic handoff generation
-- memory validation
-- secret detection
-- Claude Code adapter
-- installation command
-- package distribution
-
-Known limitations
-
-The current system is entirely file-based and manually maintained.
-
-There is currently no automated mechanism to determine whether memory is stale.
-
-There is currently no validation that agents actually update memory after completing work.
-
-The architecture has not yet been tested across multiple real-world repositories.
-
-Token usage and context-loading efficiency have not yet been benchmarked.
-
-Questions to validate
-
-The project should eventually test:
-
-- How much context does Codex actually need at session startup?
-- Which memory files should always be loaded?
-- Which files should be loaded only when relevant?
-- When should Codex update memory?
-- How can stale memory be detected?
-- How much duplication between memory and documentation is acceptable?
-- Can Git history help reconstruct missing context?
-- Does structured memory reduce repeated explanations between sessions?
-- How well can the same memory layer support Claude Code?
-- At what repository size does manual memory management become inconvenient?
-
-Next milestone
-
-v0.1 — Manual Memory Framework
-
-The first milestone should provide a complete manual persistent-memory workflow.
-
-Required components:
-
-- [x] README
-- [x] AGENTS instructions
-- [x] Project memory
-- [x] Current state
-- [ ] Decision log
-- [ ] Task tracker
-- [ ] Session handoff
-- [ ] Codex usage example
-- [ ] Claude Code compatibility documentation
-- [ ] Manual workflow test
-
-Immediate next action
-
-Create:
-
-"memory/DECISIONS.md"
-
-The first decision record should document why the project uses:
-
-repository-based Markdown memory instead of an external database.
-
-This will also provide a concrete example of how architectural decisions should be preserved.
-
-Maintainer note
-
-Keep this file short enough that a new Codex session can understand current project status quickly.
-
-When work progresses:
-
-- move durable facts into "PROJECT_MEMORY.md"
-- preserve important architectural choices in "DECISIONS.md"
-- remove obsolete temporary information
-- update the immediate next action
-
-Do not turn this file into a permanent chronological development log.
+- The fresh session discovers every required file at its documented path.
+- It reconstructs the project purpose and Codex-first rationale without prior conversation.
+- It reports the current phase and next action accurately.
+- It distinguishes implemented v0.1 behavior from planned automation.
+- It finds no path, milestone, or experiment-status contradictions across the memory files.

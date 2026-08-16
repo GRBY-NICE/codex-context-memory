@@ -1,195 +1,43 @@
-Session Handoff
+# Handoff
 
-«Last updated: 2026-08-16»
+## Current objective
 
-This file provides a concise handoff for the next Codex session.
+Validate the corrected and synchronized v0.1 memory workflow in a fresh Codex session.
 
-It is temporary operational context.
+## Latest completed work
 
-Do not treat this file as permanent project history.
+- Experiment 001 was recorded as a partial success in `experiments/001-fresh-codex-session.md`.
+- `memory/DECISIONS.md` and `memory/HANDOFF.md` were moved out of the unintended `memory/memory/` directory in commit `155228a0ab8dc054850a263b0a9b78542038dab7`.
+- `AGENTS.md` now defines startup order, source precedence, file ownership, missing-file handling, stale-memory handling, update rules, validation, Git discipline, and security.
+- `memory/CURRENT_STATE.md`, `memory/TASKS.md`, and this handoff now agree that the complete manual file structure exists and Experiment 002 is next.
 
-For durable project knowledge, use "PROJECT_MEMORY.md".
+## What the next session must do
 
-For architectural reasoning, use "DECISIONS.md".
+1. Start with no prior conversation context.
+2. Follow the startup procedure in `AGENTS.md` and read all five files under `memory/`.
+3. Reconstruct the project context and compare it with the Experiment 002 success criteria in `memory/CURRENT_STATE.md`.
+4. Record the run as `experiments/002-fresh-codex-session.md`.
+5. Update `CURRENT_STATE.md`, `TASKS.md`, and `HANDOFF.md` from the recorded evidence.
 
-For the latest overall project status, use "CURRENT_STATE.md".
+## Guardrails
 
-Session objective
+- Treat repository reality as authoritative when memory conflicts.
+- Do not recreate files under `memory/memory/`.
+- Do not claim automated validation or stale-memory detection exists.
+- Do not begin CLI implementation or Claude Code compatibility before Experiment 002 evidence is recorded.
+- Preserve accepted decisions in `memory/DECISIONS.md` unless a new explicit decision supersedes one.
 
-Establish the minimum persistent memory architecture for Codex Context Memory.
+## Remaining weaknesses
 
-Work completed
+- Consistency enforcement is manual.
+- Only Experiment 001 has been recorded.
+- No second-repository validation or token-cost measurement exists.
+- The process depends on agents following `AGENTS.md`.
 
-The repository now has the core manual memory structure:
+## Key references
 
-README.md
-AGENTS.md
-
-memory/
-├── PROJECT_MEMORY.md
-├── CURRENT_STATE.md
-├── DECISIONS.md
-├── TASKS.md
-└── HANDOFF.md
-
-The project has established:
-
-- Codex as the primary agent target
-- Claude Code as a secondary compatibility target
-- repository-based persistent context
-- Markdown as the initial memory format
-- separation between durable memory and temporary state
-- architectural decision tracking
-- explicit task tracking
-- session-to-session handoff rules
-
-Important decisions
-
-Before changing the memory architecture, review:
-
-"memory/DECISIONS.md"
-
-Important accepted decisions currently include:
-
-- memory lives inside the repository
-- Markdown is the primary memory format
-- Codex is the primary agent target
-- memory is separated by responsibility
-- full conversation transcripts are not persistent memory
-- repository reality overrides stale memory
-
-Current state
-
-The manual memory architecture is now structurally complete.
-
-However, it has not yet been validated through a fresh Codex session.
-
-Do not describe the framework as proven or production-ready.
-
-Immediate next step
-
-Run the first fresh-session Codex memory experiment.
-
-The experiment should determine whether Codex can recover project context without access to the conversation that created these files.
-
-Suggested experiment
-
-Open a fresh Codex session with access to this repository.
-
-Do not manually explain the project.
-
-Ask Codex:
-
-«Read the repository instructions and memory files. Without making any changes, tell me:
-
-1. What is this project trying to solve?
-2. Why is Codex the primary target?
-3. What is the current development stage?
-4. What architectural decisions must be preserved?
-5. What should be worked on next?
-6. Which files did you use to reconstruct this context?»
-
-Compare the response with the repository memory.
-
-Success criteria
-
-The experiment succeeds if Codex can correctly identify:
-
-- the persistent context problem
-- the Codex-first design
-- the repository-based memory architecture
-- the current v0.1 stage
-- the major architectural decisions
-- the next development task
-- the difference between durable memory and temporary state
-
-Codex should reach these conclusions from repository context rather than additional explanation from the user.
-
-Failure cases to record
-
-Record a failure if Codex:
-
-- ignores "AGENTS.md"
-- misses important memory files
-- treats planned CLI features as already implemented
-- confuses "CURRENT_STATE.md" with durable memory
-- ignores architectural decisions
-- cannot determine the next task
-- requires the user to explain information already stored in memory
-- invents project capabilities
-- loads unnecessary context without reason
-
-After the experiment
-
-Do not simply mark the experiment complete.
-
-Record what actually happened.
-
-Create an experiment document such as:
-
-"experiments/001-fresh-codex-session.md"
-
-It should include:
-
-- experiment goal
-- environment
-- prompt used
-- expected behavior
-- observed behavior
-- failures
-- useful observations
-- changes made as a result
-- conclusion
-
-If the experiment reveals a design problem:
-
-1. update the relevant implementation or memory rule
-2. update "CURRENT_STATE.md"
-3. create a new decision entry if architecture changes
-4. update "TASKS.md"
-5. refresh this handoff
-
-Files the next session should inspect
-
-Start with:
-
-1. "AGENTS.md"
-2. "memory/PROJECT_MEMORY.md"
-3. "memory/CURRENT_STATE.md"
-
-Then inspect:
-
-4. "memory/DECISIONS.md"
-5. "memory/TASKS.md"
-
-Use this handoff only for the immediate continuation context.
-
-Known limitations
-
-The framework is currently manual.
-
-There is no CLI.
-
-There is no automatic synchronization.
-
-There is no stale-memory detector.
-
-There is no automated validation.
-
-There is no completed Claude Code compatibility layer.
-
-There are no benchmark results yet.
-
-These limitations are intentional at this stage and should not be hidden.
-
-Handoff rule
-
-Replace or substantially rewrite this file when the immediate continuation context changes.
-
-Do not endlessly append old session handoffs.
-
-Git history already preserves previous versions.
-
-The purpose of this file is to answer one question:
-
-«What does the next coding-agent session need to know to continue safely?»
+- Durable architecture: `memory/PROJECT_MEMORY.md`
+- Current status and success criteria: `memory/CURRENT_STATE.md`
+- Accepted decisions: `memory/DECISIONS.md`
+- Work queue: `memory/TASKS.md`
+- Previous evidence: `experiments/001-fresh-codex-session.md`
