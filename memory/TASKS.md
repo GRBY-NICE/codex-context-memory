@@ -2,7 +2,7 @@
 
 ## Current milestone
 
-Validate the corrected v0.1 manual memory workflow with Experiment 002.
+Close the minor documentation weaknesses found by Experiment 002, then test memory updates after real work.
 
 ## Foundation
 
@@ -29,15 +29,20 @@ Validate the corrected v0.1 manual memory workflow with Experiment 002.
 
 ## Experiment 002
 
-- [ ] Open a fresh Codex session with no prior conversation.
-- [ ] Ask it to read repository instructions and all memory files.
-- [ ] Verify that it discovers all canonical paths.
-- [ ] Verify recovery of project purpose and Codex-first rationale.
-- [ ] Verify accurate reporting of current phase, implemented capabilities, limitations, and next action.
-- [ ] Verify that it distinguishes durable memory from current state and handoff context.
-- [ ] Verify that it finds no path, milestone, or experiment-status contradictions.
-- [ ] Record the result in `experiments/002-fresh-codex-session.md`.
-- [ ] Update memory files from the experiment evidence.
+- [x] Open a fresh Codex session with no prior conversation.
+- [x] Ask it to read repository instructions and all memory files.
+- [x] Verify that it discovers all canonical paths.
+- [x] Verify recovery of project purpose and Codex-first rationale.
+- [x] Verify accurate reporting of current phase, implemented capabilities, limitations, and next action.
+- [x] Verify that it distinguishes durable memory from current state and handoff context.
+- [x] Verify that it finds no path, milestone, or experiment-status contradictions.
+- [x] Record the result in `experiments/002-fresh-codex-session.md`.
+- [x] Update memory files from the experiment evidence.
+
+## Experiment 002 follow-up
+
+- [ ] Update the README layer explanation so it represents task and handoff responsibilities as well as the four conceptual layers.
+- [ ] Remove or reframe the mutable `Current stage` field in `PROJECT_MEMORY.md`; keep current phase canonical in `CURRENT_STATE.md`.
 
 ## Remaining v0.1 validation
 
@@ -58,7 +63,7 @@ Validate the corrected v0.1 manual memory workflow with Experiment 002.
 
 ## Claude Code compatibility
 
-Blocked until the basic Codex workflow has passed fresh-session validation. This work must reuse the shared Markdown memory source rather than create a competing architecture.
+Deferred until the remaining v0.1 validation and documentation work is complete. Fresh-session recovery success alone does not authorize this work. Any future adapter must reuse the shared Markdown memory source rather than create a competing architecture.
 
 - [ ] Research Claude Code project-instruction behavior.
 - [ ] Define the minimum useful `CLAUDE.md` adapter.
@@ -116,4 +121,4 @@ These are research directions, not committed or implemented features.
 
 ## Immediate next task
 
-Run Experiment 002 and record its evidence before starting CLI work or Claude Code compatibility.
+Correct the two minor documentation weaknesses found by Experiment 002. Then run the real-work memory-update validation before starting CLI work or Claude Code compatibility.

@@ -6,7 +6,7 @@ Last updated: 2026-08-16
 
 Foundation — v0.1 manual workflow validation.
 
-The repository has the complete manual memory-file structure and a recorded first fresh-session experiment. The architecture is not yet considered validated because Experiment 002 has not been run after correcting the consistency problems found in Experiment 001.
+The manual memory architecture now has two recorded fresh-session experiments. Experiment 002 successfully revalidated context recovery after the path, instruction, and state-consistency repairs prompted by Experiment 001. The framework remains early-stage and manually maintained.
 
 ## Repository reality
 
@@ -28,18 +28,27 @@ The canonical memory layout is:
 - Six initial architectural decisions recorded.
 - Experiment 001 completed and recorded as a partial success.
 - The nested-path defect for `DECISIONS.md` and `HANDOFF.md` corrected in commit `155228a0ab8dc054850a263b0a9b78542038dab7`.
-- Agent instructions strengthened with startup, precedence, missing-file, stale-memory, ownership, update, validation, Git, and security rules.
-- Frequently changing status synchronized across `CURRENT_STATE.md`, `TASKS.md`, and `HANDOFF.md`.
+- Agent instructions strengthened and frequently changing status synchronized through pull request #1.
+- Experiment 002 completed with a successful fresh-session context-recovery result.
 
-## Experiment 001 result
+## Experiment results
 
-Experiment 001 showed that a fresh Codex session could recover the project purpose and major architectural decisions without prior conversation. It also exposed three failures:
+### Experiment 001
 
-1. two memory files were stored under an unintended nested directory;
-2. current-state and task files still described already completed work as missing; and
-3. the handoff claimed Experiment 001 had not run.
+Experiment 001 supported the core context-recovery hypothesis but exposed misplaced files, stale current state, conflicting task and handoff status, broken references, and excessive duplication. Its result was partial success.
 
-The path and documentation issues have now been corrected. They have not yet been revalidated in a fresh session.
+### Experiment 002
+
+Experiment 002 tested the repaired repository from a fresh Codex session with no prior conversation. The session:
+
+- found all five memory files at their canonical paths;
+- recovered the project purpose and Codex-first rationale;
+- reported the current phase and next action accurately;
+- distinguished implemented manual behavior from planned automation;
+- recognized Experiment 001 as complete; and
+- found no material path, milestone, or experiment-status contradiction.
+
+The result was success. Full evidence is recorded in `experiments/002-fresh-codex-session.md`.
 
 ## Implemented in v0.1
 
@@ -65,19 +74,13 @@ The path and documentation issues have now been corrected. They have not yet bee
 ## Known limitations
 
 - Memory maintenance and consistency checks are manual.
-- The framework has only one recorded fresh-session experiment.
+- Both recorded experiments cover this repository only.
 - There are no multi-repository results or token-usage benchmarks.
 - The current structure relies on agents following `AGENTS.md` correctly.
 - No automated mechanism prevents future duplication or stale status.
+- `README.md` incompletely describes the responsibility layers as four layers.
+- `PROJECT_MEMORY.md` contains a mutable current-stage field that could drift from this file.
 
 ## Immediate next action
 
-Run Experiment 002 in a fresh Codex session using the corrected paths and synchronized memory files. Record the result in `experiments/002-fresh-codex-session.md`, then update `CURRENT_STATE.md`, `TASKS.md`, and `HANDOFF.md` from the evidence.
-
-## Experiment 002 success criteria
-
-- The fresh session discovers every required file at its documented path.
-- It reconstructs the project purpose and Codex-first rationale without prior conversation.
-- It reports the current phase and next action accurately.
-- It distinguishes implemented v0.1 behavior from planned automation.
-- It finds no path, milestone, or experiment-status contradictions across the memory files.
+Correct the README layer description and remove or reframe the mutable current-stage field in `PROJECT_MEMORY.md`. Then test whether a fresh Codex session follows the memory update procedure after completing real work.
