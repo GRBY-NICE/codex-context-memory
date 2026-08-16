@@ -1,191 +1,119 @@
-Project Tasks
+# Project Tasks
 
-This file tracks actionable work for Codex Context Memory.
+## Current milestone
 
-Tasks should represent real work that can be completed, reviewed, tested, or discussed.
+Validate the corrected v0.1 manual memory workflow with Experiment 002.
 
-Current milestone
+## Foundation
 
-v0.1 — Manual Memory Framework
+- [x] Create the public repository and base structure.
+- [x] Add `README.md`.
+- [x] Define the Codex-first direction.
+- [x] Add `AGENTS.md`.
+- [x] Add `memory/PROJECT_MEMORY.md`.
+- [x] Add `memory/CURRENT_STATE.md`.
+- [x] Add `memory/DECISIONS.md`.
+- [x] Add `memory/TASKS.md`.
+- [x] Add `memory/HANDOFF.md`.
+- [x] Record the initial architectural decisions.
+- [x] Correct the unintended nested paths for `DECISIONS.md` and `HANDOFF.md`.
 
-Goal:
+## Experiment 001 follow-up
 
-Build and validate the minimum repository-based persistent memory workflow for OpenAI Codex.
+- [x] Record Experiment 001 as a partial success.
+- [x] Synchronize completed foundation work in `CURRENT_STATE.md` and `TASKS.md`.
+- [x] Refresh `HANDOFF.md` so it no longer claims Experiment 001 is pending.
+- [x] Strengthen `AGENTS.md` with operational recovery and maintenance rules.
+- [x] Define manual path, consistency, and diff-scope validation.
+- [x] Reduce duplicated frequently changing state.
 
-Foundation
+## Experiment 002
 
-- [x] Create public repository
-- [x] Create project README
-- [x] Define Codex-first direction
-- [x] Create "AGENTS.md"
-- [x] Create "PROJECT_MEMORY.md"
-- [x] Create "CURRENT_STATE.md"
-- [x] Create "DECISIONS.md"
-- [x] Create "TASKS.md"
-- [ ] Create "HANDOFF.md"
+- [ ] Open a fresh Codex session with no prior conversation.
+- [ ] Ask it to read repository instructions and all memory files.
+- [ ] Verify that it discovers all canonical paths.
+- [ ] Verify recovery of project purpose and Codex-first rationale.
+- [ ] Verify accurate reporting of current phase, implemented capabilities, limitations, and next action.
+- [ ] Verify that it distinguishes durable memory from current state and handoff context.
+- [ ] Verify that it finds no path, milestone, or experiment-status contradictions.
+- [ ] Record the result in `experiments/002-fresh-codex-session.md`.
+- [ ] Update memory files from the experiment evidence.
 
-Codex validation
+## Remaining v0.1 validation
 
-- [ ] Open the repository in a fresh Codex session
-- [ ] Ask Codex to recover project purpose using repository context
-- [ ] Ask Codex to identify the current project state
-- [ ] Ask Codex to identify the next development task
-- [ ] Verify that Codex distinguishes durable memory from current state
-- [ ] Test whether Codex follows the memory update procedure
-- [ ] Record observed context failures
-- [ ] Document the first real Codex memory experiment
+- [ ] Test whether a fresh Codex session follows the memory update procedure after completing real work.
+- [ ] Run the workflow in a second repository.
+- [ ] Measure prompt and memory token cost.
+- [ ] Document failure cases and recovery guidance.
 
-Documentation
+## Documentation
 
-- [ ] Add "docs/codex-memory-guide.md"
-- [ ] Add "docs/memory-architecture.md"
-- [ ] Add a complete Codex workflow example
-- [ ] Explain memory lifecycle
-- [ ] Explain stale-memory risks
-- [ ] Document security guidance
-- [ ] Add contribution guidelines
+- [ ] Write `docs/codex-memory-guide.md`.
+- [ ] Write `docs/memory-architecture.md`.
+- [ ] Add a complete Codex workflow example.
+- [ ] Document the memory lifecycle.
+- [ ] Document stale-memory risks.
+- [ ] Add security guidance.
+- [ ] Add contribution guidance.
 
-Claude Code compatibility
+## Claude Code compatibility
 
-Do not begin this work until the basic Codex workflow has been tested.
+Blocked until the basic Codex workflow has passed fresh-session validation. This work must reuse the shared Markdown memory source rather than create a competing architecture.
 
-- [ ] Research Claude Code project instruction behavior
-- [ ] Define "CLAUDE.md" compatibility strategy
-- [ ] Map Claude Code instructions to the shared memory layer
-- [ ] Create a Claude Code example
-- [ ] Test the same project memory with Codex and Claude Code
-- [ ] Document differences between the two workflows
+- [ ] Research Claude Code project-instruction behavior.
+- [ ] Define the minimum useful `CLAUDE.md` adapter.
+- [ ] Map Claude Code instructions to the shared memory layer.
+- [ ] Create a Claude Code example.
+- [ ] Test the same project memory with Codex and Claude Code.
+- [ ] Document differences between the two workflows.
 
----
+## v0.2 — Templates and validation
 
-v0.2 — Templates and Validation
+Do not begin until v0.1 has repeatable validation evidence.
 
-Goal:
+### Templates
 
-Make the framework easy to add to another repository.
+- [ ] Create a reusable `AGENTS.md` template.
+- [ ] Create project-memory, current-state, decision-log, task, and handoff templates.
 
-Templates
+### Validation
 
-- [ ] Create reusable "AGENTS.md" template
-- [ ] Create project memory template
-- [ ] Create current state template
-- [ ] Create decision log template
-- [ ] Create task template
-- [ ] Create handoff template
+- [ ] Define required memory files in a machine-checkable form.
+- [ ] Detect missing files, malformed structure, and obviously empty sections.
+- [ ] Explore stale-memory detection.
+- [ ] Add basic automated tests.
 
-Validation
+### Example repositories
 
-- [ ] Define required memory files
-- [ ] Detect missing memory files
-- [ ] Detect malformed memory structure
-- [ ] Detect obviously empty memory sections
-- [ ] Explore stale-memory detection
-- [ ] Add basic automated tests
+- [ ] Create minimal, small-application, and long-running-project examples.
+- [ ] Document memory changes across multiple sessions.
 
-Example repositories
+## v0.3 — CLI prototype
 
-- [ ] Create minimal example
-- [ ] Create small application example
-- [ ] Create long-running project example
-- [ ] Document memory changes across multiple sessions
+Do not begin implementation until the v0.1 and v0.2 evidence supports the command design.
 
----
+### Proposed commands
 
-v0.3 — CLI Prototype
+- [ ] Design `codex-memory init` to detect the repository root, generate missing memory files, avoid overwrites, and generate or extend `AGENTS.md`.
+- [ ] Design `codex-memory status` to show available files, modification times, missing files, the current milestone, and the immediate next task.
+- [ ] Design `codex-memory validate` to detect structural problems, broken references, conflicting metadata, and likely secrets, with useful exit codes.
+- [ ] Design `codex-memory update` around verified repository changes without inventing state.
+- [ ] Design `codex-memory handoff` to draft concise continuation context while preserving unresolved work.
 
-Goal:
+## Future research
 
-Reduce the manual work required to maintain the memory system.
+These are research directions, not committed or implemented features.
 
-Proposed command interface:
+- [ ] Git-diff-aware memory updates.
+- [ ] Commit-aware context reconstruction.
+- [ ] Issue and pull-request context integration.
+- [ ] Memory relevance scoring and context-budget management.
+- [ ] Automatic context compaction.
+- [ ] Stale-memory scoring.
+- [ ] Multi-agent handoff.
+- [ ] Memory quality benchmarks and token-usage comparisons.
+- [ ] Repository-scale experiments.
 
-codex-memory init
-codex-memory status
-codex-memory validate
-codex-memory update
-codex-memory handoff
+## Immediate next task
 
-"codex-memory init"
-
-- [ ] Detect repository root
-- [ ] Generate memory directory
-- [ ] Generate initial memory files
-- [ ] Avoid overwriting existing files
-- [ ] Generate or extend "AGENTS.md"
-
-"codex-memory status"
-
-- [ ] Display available memory files
-- [ ] Display last modification times
-- [ ] Identify missing required files
-- [ ] Show current milestone
-- [ ] Show immediate next task
-
-"codex-memory validate"
-
-- [ ] Validate expected file structure
-- [ ] Detect broken references
-- [ ] Detect conflicting metadata where possible
-- [ ] Warn about likely secrets in memory
-- [ ] Return useful exit codes for automation
-
-"codex-memory handoff"
-
-- [ ] Inspect current project state
-- [ ] Generate a structured handoff draft
-- [ ] Preserve unresolved work
-- [ ] Reference relevant files
-- [ ] Avoid copying large source files into memory
-
----
-
-Future research
-
-These are research directions, not committed features.
-
-- [ ] Git diff aware memory updates
-- [ ] Commit-aware context reconstruction
-- [ ] Issue and pull request context integration
-- [ ] Memory relevance scoring
-- [ ] Context budget management
-- [ ] Automatic context compaction
-- [ ] Stale-memory scoring
-- [ ] Multi-agent handoff
-- [ ] Memory quality benchmarks
-- [ ] Token usage comparison
-- [ ] Repository-scale experiments
-
-Evaluation questions
-
-The project should eventually produce evidence for questions such as:
-
-1. Does structured repository memory reduce repeated context explanation?
-2. Can a fresh Codex session correctly recover project state?
-3. Which memory files provide the highest value?
-4. How much repository memory should be loaded at startup?
-5. When does memory become stale?
-6. Can Codex reliably maintain its own project memory?
-7. How much context can be removed without reducing task performance?
-8. Can Codex and Claude Code safely share the same persistent memory layer?
-
-Task rules
-
-When adding tasks:
-
-- make them concrete
-- make them testable when possible
-- avoid vague tasks such as "improve memory"
-- do not mark work complete before verifying it
-- move durable conclusions into project memory or decisions
-
-When a task changes project architecture, review "DECISIONS.md".
-
-When completing meaningful work, update "CURRENT_STATE.md".
-
-Immediate next task
-
-Create:
-
-"memory/HANDOFF.md"
-
-After the manual memory architecture is complete, perform the first fresh-session Codex experiment.
+Run Experiment 002 and record its evidence before starting CLI work or Claude Code compatibility.
